@@ -1,0 +1,426 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Caps — Cooper</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+    :root {
+      --bg:#0f0f10;
+      --card:#111215;
+      --accent:#e6e6e6;
+      --muted:#9aa0a6;
+    }
+
+    * { box-sizing: border-box; margin:0; padding:0; }
+
+    body {
+      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      background: linear-gradient(180deg,#0b0b0c 0%, #0f1214 100%);
+      color: var(--accent);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 28px;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 24px;
+    }
+
+    .left-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .logo img {
+      width: 90px;
+      border-radius: 10px;
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .brand-text .cooper-name {
+      font-family: 'Lobster', cursive;
+      font-size: 1.7em;
+      color: var(--accent);
+    }
+
+    .brand-text .subtitle {
+      color: var(--muted);
+      font-size: 0.9em;
+      letter-spacing: 0.6px;
+    }
+
+    nav {
+      display: flex;
+      gap: 28px;
+    }
+
+    nav a {
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 0.95em;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: var(--muted);
+    }
+
+    .page-title {
+      text-align: center;
+      margin: 50px 0 40px;
+    }
+
+    .page-title h1 {
+      font-family: 'Lobster', cursive;
+      font-size: 3em;
+      letter-spacing: 1px;
+    }
+
+    .caps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(460px, 1fr));
+      gap: 30px;
+    }
+
+    .cap-card {
+      background: var(--card);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 6px 18px rgba(3,6,8,0.5);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .cap-card:hover {
+      transform: scale(1.02);
+      box-shadow: 0 8px 22px rgba(3,6,8,0.7);
+    }
+
+    .cap-image {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      background-color: #1b1c1f;
+      display: block;
+    }
+
+    .cap-info {
+      padding: 18px;
+    }
+
+    .cap-info h2 {
+      font-size: 1.3em;
+      font-weight: 600;
+      margin-bottom: 4px;
+      letter-spacing: 0.5px;
+    }
+
+    .price {
+      font-size: 1.05em;
+      font-weight: 600;
+      margin-bottom: 10px;
+      color: var(--accent);
+    }
+
+    .cap-type {
+      font-size: 0.9em;
+      font-weight: 500;
+      color: var(--accent);
+      background: rgba(255,255,255,0.06);
+      padding: 4px 10px;
+      border-radius: 6px;
+      display: inline-block;
+      margin-bottom: 10px;
+    }
+
+    .cap-info p {
+      color: var(--muted);
+      font-size: 0.95em;
+      margin-bottom: 4px;
+    }
+
+    footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 13px;
+      margin-top: 80px;
+    }
+
+    @media (max-width:700px) {
+      .caps-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <header>
+      <div class="left-header">
+        <div class="logo"><img src="logo2.png" alt="Cooper Logo"></div>
+        <div class="brand-text">
+          <div class="cooper-name">Cooper</div>
+          <div class="subtitle">Upperwear Collective</div>
+        </div>
+      </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="#">Shop</a>
+        <a href="#">Support</a>
+      </nav>
+    </header>
+
+    <section class="page-title">
+      <h1>Caps Collection</h1>
+    </section>
+
+    <section class="caps-grid">
+
+      <!-- Each non-winter cap = $34.99 CAD -->
+      <!-- Each winter cap = $39.99 CAD -->
+
+      <div class="cap-card">
+        <img src="cooper-midnight-black.png" class="cap-image" alt="Midnight Black">
+        <div class="cap-info">
+          <span class="cap-type">Dad Cap</span>
+          <h2>Midnight Black</h2>
+          <p class="price">$34.99 CAD</p>
+          <p>Matte black cotton cap with curved visor and embroidered Cooper logo.</p>
+          <p>Color: Jet Black</p>
+        </div>
+      </div>
+
+      <div class="cap-card">
+        <img src="cooper-ivory-crest.png" class="cap-image" alt="Ivory Crest">
+        <div class="cap-info">
+          <span class="cap-type">Baseball Cap</span>
+          <h2>Ivory Crest</h2>
+          <p class="price">$34.99 CAD</p>
+          <p>Off-white structured cap with bold front embroidery and metal clasp.</p>
+          <p>Color: Ivory White</p>
+        </div>
+      </div>
+
+      <div class="cap-card">
+        <img src="cooper-navy-horizon.png" class="cap-image" alt="Navy Horizon">
+        <div class="cap-info">
+          <span class="cap-type">Dad Cap</span>
+          <h2>Navy Horizon</h2>
+          <p class="price">$34.99 CAD</p>
+          <p>Deep navy tone with adjustable strap and Cooper woven tag.</p>
+          <p>Color: Navy Blue</p>
+        </div>
+      </div>
+
+      <div class="cap-card">
+        <img src="cooper-sandstone.png" class="cap-image" alt="Sandstone">
+        <div class="cap-info">
+          <span class="cap-type">Trucker Cap</span>
+          <h2>Sandstone</h2>
+          <p class="price">$34.99 CAD</p>
+          <p>Beige mesh-back cap inspired by vintage desert tones.</p>
+          <p>Color: Sand</p>
+        </div>
+      </div>
+
+      <div class="cap-card">
+        <img src="cooper-carbon-peak.png" class="cap-image" alt="Carbon Peak">
+        <div class="cap-info">
+          <span class="cap-type">Snapback</span>
+          <h2>Carbon Peak</h2>
+          <p class="price">$34.99 CAD</p>
+          <p>Dark charcoal finish with high crown and raised Cooper “C”.</p>
+          <p>Color: Charcoal Gray</p>
+        </div>
+      </div>
+
+      <div class="cap-card">
+        <img src="cooper-olive-field.png" class="cap-image" alt="Olive Field">
+        <div class="cap-info">
+          <span class="cap-type">Dad Cap</span>
+          <h2>Olive Field</h2>
+          <p class="price">$34.99 CAD</p>
+          <p>Soft washed cotton in olive green for a timeless outdoor look.</p>
+          <p>Color: Olive Green</p>
+        </div>
+      </div>
+
+      <!-- WINTER CAP $39.99 -->
+      <div class="cap-card">
+        <img src="cooper-frost-gray.png" class="cap-image" alt="Frost Gray">
+        <div class="cap-info">
+          <span class="cap-type">Winter Cap</span>
+          <h2>Frost Gray</h2>
+          <p class="price">$39.99 CAD</p>
+          <p>Fleece-lined fabric cap designed for warmth with subtle logo patch.</p>
+          <p>Color: Ash Gray</p>
+        </div>
+      </div>
+
+      <div class="cap-card">
+        <img src="cooper-skyline-blue.png" class="cap-image" alt="Skyline Blue">
+        <div class="cap-info">
+          <span class="cap-type">Baseball Cap</span>
+          <h2>Skyline Blue</h2>
+          <p class="price">$34.99 CAD</p>
+          <p>Light blue canvas with tonal stitching and curved bill.</p>
+          <p>Color: Sky Blue</p>
+        </div>
+      </div>
+
+      <div class="cap-card">
+        <img src="cooper-rust-haven.png" class="cap-image" alt="Rust Haven">
+        <div class="cap-info">
+          <span class="cap-type">Dad Cap</span>
+          <h2>Rust Haven</h2>
+          <p class="price">$34.99 CAD</p>
+          <p>Soft-brushed cotton in earthy rust with minimalist front detail.</p>
+          <p>Color: Rust Brown</p>
+        </div>
+      </div>
+
+      <div class="cap-card">
+        <img src="cooper-urban-taupe.png" class="cap-image" alt="Urban Taupe">
+        <div class="cap-info">
+          <span class="cap-type">Snapback</span>
+          <h2>Urban Taupe</h2>
+          <p class="price">$34.99 CAD</p>
+          <p>Neutral beige-gray hybrid with structured front panel.</p>
+          <p>Color: Taupe</p>
+        </div>
+      </div>
+
+      <div class="cap-card">
+        <img src="cooper-mist-white.png" class="cap-image" alt="Mist White">
+        <div class="cap-info">
+          <span class="cap-type">Trucker Cap</span>
+          <h2>Mist White</h2>
+          <p class="price">$34.99 CAD</p>
+          <p>Mesh-back design with matte white front and silver logo thread.</p>
+          <p>Color: White / Silver</p>
+        </div>
+      </div>
+
+      <div class="cap-card">
+        <img src="cooper-ember-red.png" class="cap-image" alt="Ember Red">
+        <div class="cap-info">
+          <span class="cap-type">Baseball Cap</span>
+          <h2>Ember Red</h2>
+          <p class="price">$34.99 CAD</p>
+          <p>Classic Cooper curved visor design in vibrant crimson red.</p>
+          <p>Color: Crimson Red</p>
+        </div>
+      </div>
+
+      <div class="cap-card">
+        <img src="cooper-stone-ridge.png" class="cap-image" alt="Stone Ridge">
+        <div class="cap-info">
+          <span class="cap-type">Dad Cap</span>
+          <h2>Stone Ridge</h2>
+          <p class="price">$34.99 CAD</p>
+          <p>Graystone fabric blend with minimalist embroidered Cooper name.</p>
+          <p>Color: Light Gray</p>
+        </div>
+      </div>
+
+      <div class="cap-card">
+        <img src="cooper-sienna-field.png" class="cap-image" alt="Sienna Field">
+        <div class="cap-info">
+          <span class="cap-type">Trucker Cap</span>
+          <h2>Sienna Field</h2>
+          <p class="price">$34.99 CAD</p>
+          <p>Rusty orange with breathable mesh and soft sweatband lining.</p>
+          <p>Color: Burnt Sienna</p>
+        </div>
+      </div>
+
+      <div class="cap-card">
+        <img src="cooper-deep-forest.png" class="cap-image" alt="Deep Forest">
+        <div class="cap-info">
+          <span class="cap-type">Baseball Cap</span>
+          <h2>Deep Forest</h2>
+          <p class="price">$34.99 CAD</p>
+          <p>Dark green curved visor cap with tonal Cooper stitching.</p>
+          <p>Color: Forest Green</p>
+        </div>
+      </div>
+
+      <!-- WINTER CAP -->
+      <div class="cap-card">
+        <img src="cooper-polar-gray.png" class="cap-image" alt="Polar Gray">
+        <div class="cap-info">
+          <span class="cap-type">Winter Cap</span>
+          <h2>Polar Gray</h2>
+          <p class="price">$39.99 CAD</p>
+          <p>Insulated thermal lining, perfect for cold conditions.</p>
+          <p>Color: Polar Gray</p>
+        </div>
+      </div>
+
+      <div class="cap-card">
+        <img src="cooper-sunset-tan.png" class="cap-image" alt="Sunset Tan">
+        <div class="cap-info">
+          <span class="cap-type">Dad Cap</span>
+          <h2>Sunset Tan</h2>
+          <p class="price">$34.99 CAD</p>
+          <p>Warm tan tone cap inspired by desert sunsets.</p>
+          <p>Color: Tan</p>
+        </div>
+      </div>
+
+      <div class="cap-card">
+        <img src="cooper-crimson-line.png" class="cap-image" alt="Crimson Line">
+        <div class="cap-info">
+          <span class="cap-type">Snapback</span>
+          <h2>Crimson Line</h2>
+          <p class="price">$34.99 CAD</p>
+          <p>Two-tone red and black design with high-profile Cooper badge.</p>
+          <p>Color: Red / Black</p>
+        </div>
+      </div>
+
+      <div class="cap-card">
+        <img src="cooper-fogstone.png" class="cap-image" alt="Fogstone">
+        <div class="cap-info">
+          <span class="cap-type">Baseball Cap</span>
+          <h2>Fogstone</h2>
+          <p class="price">$34.99 CAD</p>
+          <p>Soft neutral gray with slightly curved visor and adjustable strap.</p>
+          <p>Color: Fog Gray</p>
+        </div>
+      </div>
+
+      <!-- WINTER CAP -->
+      <div class="cap-card">
+        <img src="cooper-glacier-white.png" class="cap-image" alt="Glacier White">
+        <div class="cap-info">
+          <span class="cap-type">Winter Cap</span>
+          <h2>Glacier White</h2>
+          <p class="price">$39.99 CAD</p>
+          <p>Thick-knit design lined with fleece for ultimate comfort.</p>
+          <p>Color: Pure White</p>
+        </div>
+      </div>
+
+    </section>
+
+    <footer>
+      <p>© 2025 <span class="cooper-name">Cooper</span>. All rights reserved.</p>
+    </footer>
+  </main>
+</body>
+</html>
