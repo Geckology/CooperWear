@@ -4,6 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Cooper — Upperwear Collective</title>
+
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
@@ -14,7 +15,7 @@
       --muted:#9aa0a6;
     }
 
-    * { box-sizing: border-box; margin:0; padding:0; }
+    * { margin:0; padding:0; box-sizing:border-box; }
 
     body {
       font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
@@ -23,226 +24,210 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    .container {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 28px;
-    }
+    .container { max-width:1100px; margin:0 auto; padding:28px; }
 
     header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 16px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      margin-bottom:16px;
     }
 
     .left-header {
-      display: flex;
-      align-items: center;
-      gap: 16px;
+      display:flex;
+      align-items:center;
+      gap:16px;
     }
 
     .logo img {
-      width: 100px;
-      height: auto;
-      border-radius: 10px;
+      width:100px;
+      height:auto;
+      border-radius:10px;
     }
 
-    .brand-text {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+    .brand-text { display:flex; flex-direction:column; }
+
+    .cooper-name {
+      font-family:'Lobster', cursive;
+      font-size:1.8em;
+      color:var(--accent);
     }
 
-    .brand-text .cooper-name {
-      font-family: 'Lobster', cursive;
-      color: var(--accent);
-      font-size: 1.8em;
-      letter-spacing: 0.5px;
-      margin-bottom: 2px;
-    }
-
-    .brand-text .subtitle {
-      color: var(--muted);
-      font-size: 0.95em;
-      letter-spacing: 0.8px;
+    .subtitle {
+      color:var(--muted);
+      font-size:0.95em;
+      letter-spacing:0.8px;
     }
 
     nav {
-      display: flex;
-      gap: 28px;
+      display:flex;
+      gap:28px;
     }
 
     nav a {
-      color: var(--accent);
-      text-decoration: none;
-      font-size: 0.95em;
-      transition: color 0.3s ease;
+      color:var(--accent);
+      text-decoration:none;
+      transition:0.3s ease;
+      font-size:0.95em;
     }
 
-    nav a:hover {
-      color: var(--muted);
-    }
+    nav a:hover { color:var(--muted); }
 
+    /* Wallpaper */
     .wallpaper {
-      position: relative;
-      width: 100%;
-      aspect-ratio: 16 / 9;
-      border-radius: 16px;
-      overflow: hidden;
-      margin-bottom: 48px;
+      position:relative;
+      width:100%;
+      aspect-ratio:16 / 9;
+      overflow:hidden;
+      border-radius:16px;
+      margin-bottom:48px;
     }
 
     .wallpaper img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      filter: blur(1.3px) brightness(0.52);
-      transform: scale(1.03);
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      filter:blur(1.3px) brightness(0.52);
+      transform:scale(1.03);
     }
 
     .wallpaper::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.25);
+      content:"";
+      position:absolute;
+      inset:0;
+      background:rgba(0,0,0,0.25);
     }
 
     .wallpaper-text {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      text-align: center;
-      color: var(--accent);
-      z-index: 2;
+      position:absolute;
+      top:50%;
+      left:50%;
+      transform:translate(-50%, -50%);
+      text-align:center;
+      z-index:2;
     }
 
     .wallpaper-text h1 {
-      font-family: 'Lobster', cursive;
-      font-size: 200px;
-      margin-bottom: 10px;
-      text-shadow: 0 6px 20px rgba(0,0,0,0.6);
-      letter-spacing: 1px;
-      animation: fadeIn 2s ease;
+      font-family:'Lobster', cursive;
+      font-size:200px;
+      text-shadow:0 6px 20px rgba(0,0,0,0.6);
     }
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translate(-50%, -60%); }
-      to { opacity: 1; transform: translate(-50%, -50%); }
-    }
-
-    /* --- New Shop headline section --- */
+    /* Shop Title */
     .shop-heading {
-      text-align: center;
-      margin: 60px 0 32px;
+      text-align:center;
+      margin:60px 0 32px;
     }
 
     .shop-heading h2 {
-      font-family: 'Lobster', cursive;
-      font-size: 2.8em;
-      color: var(--accent);
-      letter-spacing: 1px;
-      text-shadow: 0 4px 14px rgba(0,0,0,0.6);
-      animation: fadeIn 1.5s ease;
+      font-family:'Lobster', cursive;
+      font-size:2.8em;
+      color:var(--accent);
+      text-shadow:0 4px 14px rgba(0,0,0,0.6);
     }
 
+    /* Collections */
     .collections {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(460px, 1fr));
-      gap: 24px;
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(460px, 1fr));
+      gap:24px;
     }
 
     .collection-item {
-      position: relative;
-      aspect-ratio: 16 / 9;
-      border-radius: 14px;
-      overflow: hidden;
-      cursor: pointer;
-      background: var(--card);
-      box-shadow: 0 6px 18px rgba(3,6,8,0.6);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position:relative;
+      aspect-ratio:16 / 9;
+      overflow:hidden;
+      border-radius:14px;
+      background:var(--card);
+      cursor:pointer;
+      box-shadow:0 6px 18px rgba(3,6,8,0.6);
+      transition:0.3s ease;
     }
 
     .collection-item:hover {
-      transform: scale(1.03);
-      box-shadow: 0 8px 22px rgba(3,6,8,0.8);
+      transform:scale(1.03);
+      box-shadow:0 8px 22px rgba(3,6,8,0.8);
     }
 
     .collection-item img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      filter: brightness(0.8);
-      transition: filter 0.3s ease;
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      filter:brightness(0.8);
+      transition:0.3s ease;
     }
 
     .collection-item:hover img {
-      filter: brightness(0.6);
+      filter:brightness(0.6);
     }
 
     .collection-title {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      color: var(--accent);
-      font-size: 50px;
-      font-weight: 600;
-      text-shadow: 0 2px 10px rgba(0,0,0,0.6);
-      text-align: center;
-      letter-spacing: 1px;
+      position:absolute;
+      top:50%;
+      left:50%;
+      transform:translate(-50%,-50%);
+      font-size:50px;
+      font-weight:600;
+      color:var(--accent);
+      text-shadow:0 2px 10px rgba(0,0,0,0.6);
     }
 
+    /* Support Section */
     .support-section {
-      text-align: center;
-      margin-top: 80px;
-      color: var(--accent);
+      text-align:center;
+      margin-top:80px;
+      color:var(--accent);
     }
 
     .support-section h2 {
-      font-family: 'Lobster', cursive;
-      font-size: 2em;
-      margin-bottom: 10px;
+      font-family:'Lobster', cursive;
+      font-size:2em;
+      margin-bottom:12px;
     }
 
     .support-section p {
-      color: var(--muted);
-      font-size: 1em;
-      margin-bottom: 12px;
+      margin-bottom:10px;
+      color:var(--muted);
     }
 
     .support-section a {
-      color: var(--accent);
-      text-decoration: underline;
-      transition: color 0.3s ease;
+      color:var(--accent);
+      text-decoration:underline;
     }
 
-    .support-section a:hover {
-      color: var(--muted);
+    .support-section a.button {
+      background:var(--accent);
+      color:#111215;
+      padding:10px 20px;
+      border-radius:8px;
+      text-decoration:none;
+      font-weight:600;
+      display:inline-block;
+      margin-top:12px;
     }
 
     footer {
-      text-align: center;
-      color: var(--muted);
-      font-size: 13px;
-      margin-top: 40px;
+      text-align:center;
+      color:var(--muted);
+      font-size:13px;
+      margin-top:40px;
     }
 
-    @media (max-width:960px) {
-      .collections { grid-template-columns: 1fr 1fr; }
+    @media(max-width:960px) {
+      .collections { grid-template-columns:1fr 1fr; }
     }
 
-    @media (max-width:700px) {
-      .collections { grid-template-columns: 1fr; }
-      .wallpaper-text h1 { font-size: 48px; }
-      nav { gap: 16px; font-size: 0.85em; }
+    @media(max-width:700px) {
+      .collections { grid-template-columns:1fr; }
+      .wallpaper-text h1 { font-size:48px; }
     }
   </style>
 </head>
+
 <body>
   <main class="container">
+
+    <!-- HEADER -->
     <header>
       <div class="left-header">
         <div class="logo"><img src="logo2.png" alt="Cooper Logo"></div>
@@ -251,59 +236,65 @@
           <div class="subtitle">Upperwear Collective</div>
         </div>
       </div>
+
       <nav>
         <a href="index.html">Home</a>
-        <a href="About/about.html">About</a>
+        <a href="about/index.html">About</a>
         <a href="#">Shop</a>
-        <a href="Support/support.html">Support</a>
+        <a href="support/index.html">Support</a>
       </nav>
     </header>
 
+    <!-- WALLPAPER -->
     <section class="wallpaper">
-      <img src="wallpaper.png" alt="Cooper Wallpaper">
+      <img src="wallpaper.png" alt="Wallpaper">
       <div class="wallpaper-text">
         <h1>Cooper</h1>
       </div>
     </section>
 
-    <!-- New Shop Headline -->
+    <!-- SHOP TITLE -->
     <section class="shop-heading">
       <h2>Shop</h2>
     </section>
 
+    <!-- COLLECTION GRID -->
     <section class="collections">
-      <a class="collection-item" href="Caps/caps.html">
+
+      <a class="collection-item" href="caps/index.html">
         <img src="caps.png" alt="Caps Collection">
         <div class="collection-title">Caps</div>
       </a>
 
-      <a class="collection-item" href="Shirts/shirts.html">
-        <img src="shirts-tshirts.png" alt="Shirts & T-Shirts Collection">
-        <div class="collection-title">Shirts &amp; T-Shirts</div>
+      <a class="collection-item" href="shirts-tshirts/index.html">
+        <img src="shirts-tshirts.png" alt="Shirts & T-Shirts">
+        <div class="collection-title">Shirts & T-Shirts</div>
       </a>
 
-      <a class="collection-item" href="Jackets/jackets.html">
+      <a class="collection-item" href="jackets/index.html">
         <img src="jackets.png" alt="Jackets Collection">
         <div class="collection-title">Jackets</div>
       </a>
 
-      <a class="collection-item" href="Sweatshirts/sweatshirts.html">
-        <img src="sweatshirtshoodies.png" alt="Sweatshirts & Hoodies Collection">
+      <a class="collection-item" href="sweatshirtshoodies/index.html">
+        <img src="sweatshirtshoodies.png" alt="Sweatshirts & Hoodies">
         <div class="collection-title">Sweatshirts & Hoodies</div>
       </a>
+
     </section>
 
+    <!-- SUPPORT -->
     <section class="support-section">
       <h2>Need Help?</h2>
-      <p>For order issues, shipping questions, or product support — we’ve got you.</p>
       <p>Email: <a href="mailto:support@cooperwear.com">support@cooperwear.com</a></p>
-      <p>Or visit our <a href="Support/support.html">Help Center</a>.</p>
-      <p><a href="Support/support.html" style="display:inline-block;margin-top:12px;padding:10px 20px;background:var(--accent);color:#111215;border-radius:8px;text-decoration:none;font-weight:600;">Go to Support</a></p>
+      <a href="support/index.html" class="button">Go to Support</a>
     </section>
 
+    <!-- FOOTER -->
     <footer>
-      <p>© 2025 <span class="cooper-name">Cooper</span>. All rights reserved.</p>
+      © 2025 Cooper. All rights reserved.
     </footer>
+
   </main>
 </body>
 </html>
