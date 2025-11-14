@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jackets — Cooper</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+    :root {
+      --bg:#0f0f10;
+      --card:#111215;
+      --accent:#e6e6e6;
+      --muted:#9aa0a6;
+    }
+
+    * { box-sizing: border-box; margin:0; padding:0; }
+
+    body {
+      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      background: linear-gradient(180deg,#0b0b0c 0%, #0f1214 100%);
+      color: var(--accent);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 28px;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 36px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .brand img {
+      width: 90px;
+      border-radius: 10px;
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-text .cooper-name {
+      font-family: 'Lobster', cursive;
+      color: var(--accent);
+      font-size: 1.8em;
+    }
+
+    .brand-text .subtitle {
+      color: var(--muted);
+      font-size: 0.9em;
+    }
+
+    nav a {
+      color: var(--accent);
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 0.95em;
+      transition: color 0.2s ease;
+    }
+
+    nav a:hover { color: #ffffff; }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(460px, 1fr));
+      gap: 28px;
+    }
+
+    .item {
+      background: var(--card);
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 6px 16px rgba(3,6,8,0.5);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .item:hover {
+      transform: scale(1.02);
+      box-shadow: 0 8px 22px rgba(3,6,8,0.7);
+    }
+
+    .item img {
+      width: 100%;
+      height: 340px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .item-content {
+      padding: 16px 20px;
+    }
+
+    .item-title {
+      font-size: 1.4em;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: var(--accent);
+    }
+
+    .item-price {
+      font-size: 1.1em;
+      font-weight: 600;
+      margin-bottom: 10px;
+      color: var(--accent);
+    }
+
+    .item-desc {
+      color: var(--muted);
+      font-size: 0.95em;
+      line-height: 1.5;
+    }
+
+    footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 13px;
+      margin-top: 60px;
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <header>
+      <div class="brand">
+        <img src="logo2.png" alt="Cooper Logo">
+        <div class="brand-text">
+          <div class="cooper-name">Cooper</div>
+          <div class="subtitle">Upperwear Collective</div>
+        </div>
+      </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="shop.html">Shop</a>
+        <a href="support.html">Support</a>
+      </nav>
+    </header>
+
+    <section class="grid">
+
+      <!-- ORIGINAL 20 ITEMS -->
+
+      <!-- VARSITY JACKETS ($99.99) -->
+      <div class="item">
+        <img src="cooper-varsity-black.png" alt="Varsity Black">
+        <div class="item-content">
+          <div class="item-title">Varsity Black</div>
+          <div class="item-price">$99.99 CAD</div>
+          <div class="item-desc">Classic black varsity jacket with ribbed cuffs, embroidered C logo patch on chest, sporty fit.</div>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="cooper-varsity-navy-stripe.png" alt="Varsity Navy Stripe">
+        <div class="item-content">
+          <div class="item-title">Varsity Navy Stripe</div>
+          <div class="item-price">$99.99 CAD</div>
+          <div class="item-desc">Navy varsity jacket with white stripe sleeves, Cooper logo patch on back, ribbed collar.</div>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="cooper-varsity-red.png" alt="Varsity Red">
+        <div class="item-content">
+          <div class="item-title">Varsity Red</div>
+          <div class="item-price">$99.99 CAD</div>
+          <div class="item-desc">Bright red varsity with contrasting black sleeves and embroidered C logo patch on chest.</div>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="cooper-varsity-gray.png" alt="Varsity Gray">
+        <div class="item-content">
+          <div class="item-title">Varsity Gray</div>
+          <div class="item-price">$99.99 CAD</div>
+          <div class="item-desc">Light gray varsity jacket with curved hem, ribbed cuffs, embroidered Cooper logo patch on bicep.</div>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="cooper-varsity-cream.png" alt="Varsity Cream">
+        <div class="item-content">
+          <div class="item-title">Varsity Cream</div>
+          <div class="item-price">$99.99 CAD</div>
+          <div class="item-desc">Cream varsity jacket with contrasting sleeves, C logo patch on chest, sporty fit.</div>
+        </div>
+      </div>
+
+      <!-- BOMBER JACKETS ($119.99) -->
+      <div class="item">
+        <img src="cooper-bomber-olive.png" alt="Bomber Olive">
+        <div class="item-content">
+          <div class="item-title">Bomber Olive</div>
+          <div class="item-price">$119.99 CAD</div>
+          <div class="item-desc">Classic olive bomber jacket with zip front, chest logo patch, ribbed cuffs and hem.</div>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="cooper-bomber-navy-pattern.png" alt="Bomber Navy Pattern">
+        <div class="item-content">
+          <div class="item-title">Bomber Navy Pattern</div>
+          <div class="item-price">$119.99 CAD</div>
+          <div class="item-desc">Navy bomber with geometric pattern, chest logo patch, ribbed cuffs and collar.</div>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="cooper-bomber-gray.png" alt="Bomber Gray">
+        <div class="item-content">
+          <div class="item-title">Bomber Gray</div>
+          <div class="item-price">$119.99 CAD</div>
+          <div class="item-desc">Soft gray bomber jacket with full zip, Cooper logo patch on back, elastic hem and cuffs.</div>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="cooper-bomber-maroon.png" alt="Bomber Maroon">
+        <div class="item-content">
+          <div class="item-title">Bomber Maroon</div>
+          <div class="item-price">$119.99 CAD</div>
+          <div class="item-desc">Maroon bomber jacket with chest logo patch, elastic cuffs and hem, versatile style.</div>
+        </div>
+      </div>
+
+      <!-- LEATHER BOMBER ($149.99) -->
+      <div class="item">
+        <img src="cooper-bomber-black-leather.png" alt="Bomber Black Leather">
+        <div class="item-content">
+          <div class="item-title">Bomber Black Leather</div>
+          <div class="item-price">$149.99 CAD</div>
+          <div class="item-desc">Premium black leather bomber with Cooper logo patch on sleeve, zippered pockets.</div>
+        </div>
+      </div>
+
+      <!-- PILOT JACKETS ($149.99) -->
+      <div class="item">
+        <img src="cooper-pilot-black.png" alt="Pilot Black">
+        <div class="item-content">
+          <div class="item-title">Pilot Black</div>
+          <div class="item-price">$149.99 CAD</div>
+          <div class="item-desc">Classic black pilot jacket with front pockets, Cooper logo patch on chest, zip closure.</div>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="cooper-pilot-olive.png" alt="Pilot Olive">
+        <div class="item-content">
+          <div class="item-title">Pilot Olive</div>
+          <div class="item-price">$149.99 CAD</div>
+          <div class="item-desc">Olive pilot jacket with leather trims, chest logo patch and vintage styling.</div>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="cooper-pilot-navy.png" alt="Pilot Navy">
+        <div class="item-content">
+          <div class="item-title">Pilot Navy</div>
+          <div class="item-price">$149.99 CAD</div>
+          <div class="item-desc">Navy pilot jacket, soft lining, Cooper logo patch on sleeve, zip front.</div>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="cooper-pilot-gray.png" alt="Pilot Gray">
+        <div class="item-content">
+          <div class="item-title">Pilot Gray</div>
+          <div class="item-price">$149.99 CAD</div>
+          <div class="item-desc">Light gray pilot jacket with shoulder straps, chest logo patch, zip closure, stylish cut.</div>
+        </div>
+      </div>
+
+      <!-- SHIRT JACKETS ($119.99) -->
+      <div class="item">
+        <img src="cooper-shirtjacket-olive.png" alt="Shirt Jacket Olive">
+        <div class="item-content">
+          <div class="item-title">Shirt Jacket Olive</div>
+          <div class="item-price">$119.99 CAD</div>
+          <div class="item-desc">Olive button-front shirt jacket, chest pocket, Cooper logo patch above pocket.</div>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="cooper-shirtjacket-denim.png" alt="Shirt Jacket Denim">
+        <div class="item-content">
+          <div class="item-title">Shirt Jacket Denim</div>
+          <div class="item-price">$119.99 CAD</div>
+          <div class="item-desc">Light blue denim shirt jacket, oversized fit, curved hem, Cooper logo patch on seam.</div>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="cooper-shirtjacket-gray.png" alt="Shirt Jacket Gray">
+        <div class="item-content">
+          <div class="item-title">Shirt Jacket Gray</div>
+          <div class="item-price">$119.99 CAD</div>
+          <div class="item-desc">Soft gray shirt jacket with subtle plaid pattern, chest logo patch, button-front.</div>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="cooper-shirtjacket-black.png" alt="Shirt Jacket Black">
+        <div class="item-content">
+          <div class="item-title">Shirt Jacket Black</div>
+          <div class="item-price">$119.99 CAD</div>
+          <div class="item-desc">Classic black shirt jacket, chest logo patch, oversized fit, curved hem, versatile.</div>
+        </div>
+      </div>
+
+      <!-- NEW 4 ITEMS WITH LOGO PATCHES -->
+      <div class="item">
+        <img src="cooper-vest-down.png" alt="Vest Down Style">
+        <div class="item-content">
+          <div class="item-title">Vest Down Style</div>
+          <div class="item-price">$109.99 CAD</div>
+          <div class="item-desc">Quilted down vest with embroidered Cooper logo patch on chest, zip closure, warm and lightweight.</div>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="cooper-leather-vest.png" alt="Leather Vest">
+        <div class="item-content">
+          <div class="item-title">Leather Vest</div>
+          <div class="item-price">$129.99 CAD</div>
+          <div class="item-desc">Premium leather vest with Cooper logo patch on chest, zip front, rugged biker style.</div>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="cooper-leather-brown.png" alt="Classic Brown Leather Jacket">
+        <div class="item-content">
+          <div class="item-title">Classic Brown Leather Jacket</div>
+          <div class="item-price">$169.99 CAD</div>
+          <div class="item-desc">Timeless brown leather jacket with Cooper logo patch on sleeve, soft lining, zip and snap closure.</div>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="cooper-leather-black-rock.png" alt="Black Rock Style Leather Jacket">
+        <div class="item-content">
+          <div class="item-title">Black Rock Style Leather Jacket</div>
+          <div class="item-price">$179.99 CAD</div>
+          <div class="item-desc">Edgy black leather rocker jacket with Cooper logo patch on chest, fitted cut, biker style.</div>
+        </div>
+      </div>
+
+    </section>
+
+    <footer>
+      <p>Need Help?<br>
+      For order issues, shipping questions, or product support — we’ve got you.<br><br>
+      Email: support@cooperwear.com<br>
+      Or visit our Help Center.<br><br>
+      © 2025 Cooper. All rights reserved.</p>
+    </footer>
+  </main>
+</body>
+</html>
