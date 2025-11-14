@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shirts & T-Shirts — Cooper</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+    :root {
+      --bg:#0f0f10;
+      --card:#111215;
+      --accent:#e6e6e6;
+      --muted:#9aa0a6;
+    }
+
+    * { box-sizing: border-box; margin:0; padding:0; }
+
+    body {
+      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      background: linear-gradient(180deg,#0b0b0c 0%, #0f1214 100%);
+      color: var(--accent);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 28px;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 36px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .brand img {
+      width: 90px;
+      border-radius: 10px;
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-text .cooper-name {
+      font-family: 'Lobster', cursive;
+      color: var(--accent);
+      font-size: 1.8em;
+    }
+
+    .brand-text .subtitle {
+      color: var(--muted);
+      font-size: 0.9em;
+    }
+
+    nav a {
+      color: var(--accent);
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 0.95em;
+      transition: color 0.2s ease;
+    }
+
+    nav a:hover { color: #ffffff; }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(460px, 1fr));
+      gap: 28px;
+    }
+
+    .item {
+      background: var(--card);
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 6px 16px rgba(3,6,8,0.5);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .item:hover {
+      transform: scale(1.02);
+      box-shadow: 0 8px 22px rgba(3,6,8,0.7);
+    }
+
+    .item img {
+      width: 100%;
+      height: 340px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .item-content {
+      padding: 16px 20px;
+    }
+
+    .item-title {
+      font-size: 1.4em;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: var(--accent);
+    }
+
+    .item-price {
+      margin: 6px 0 10px 0;
+      font-size: 1.1em;
+      font-weight: 600;
+      color: #ffffff;
+    }
+
+    .item-desc {
+      color: var(--muted);
+      font-size: 0.95em;
+      line-height: 1.5;
+    }
+
+    footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 13px;
+      margin-top: 60px;
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <header>
+      <div class="brand">
+        <img src="logo2.png" alt="Cooper Logo">
+        <div class="brand-text">
+          <div class="cooper-name">Cooper</div>
+          <div class="subtitle">Upperwear Collective</div>
+        </div>
+      </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="shop.html">Shop</a>
+        <a href="support.html">Support</a>
+      </nav>
+    </header>
+
+    <section class="grid">
+
+      <!-- 1 — Onyx Oversized (T-Shirt) -->
+      <div class="item">
+        <img src="cooper-onyx-oversized.png" alt="Onyx Oversized">
+        <div class="item-content">
+          <div class="item-title">Onyx Oversized</div>
+          <div class="item-price">$49.99 CAD</div>
+          <div class="item-desc">Black oversized T-shirt with curved hem, left chest logo, and soft cotton fabric.</div>
+        </div>
+      </div>
+
+      <!-- 2 — Cobalt Backprint (T-Shirt) -->
+      <div class="item">
+        <img src="cooper-cobalt-backprint.png" alt="Cobalt Backprint">
+        <div class="item-content">
+          <div class="item-title">Cobalt Backprint</div>
+          <div class="item-price">$49.99 CAD</div>
+          <div class="item-desc">Bright blue T-shirt, slightly oversized, curved hem, large Cooper logo on the back.</div>
+        </div>
+      </div>
+
+      <!-- 3 — Sand Denim (Shirt) -->
+      <div class="item">
+        <img src="cooper-sand-denim.png" alt="Sand Denim">
+        <div class="item-content">
+          <div class="item-title">Sand Denim</div>
+          <div class="item-price">$99.99 CAD</div>
+          <div class="item-desc">Light beige oversized denim shirt with chest pockets and subtle shoulder stitching.</div>
+        </div>
+      </div>
+
+      <!-- 4 — Graphite Sleeve (T-Shirt) -->
+      <div class="item">
+        <img src="cooper-graphite-sleeve.png" alt="Graphite Sleeve">
+        <div class="item-content">
+          <div class="item-title">Graphite Sleeve</div>
+          <div class="item-price">$49.99 CAD</div>
+          <div class="item-desc">Dark gray T-shirt, curved hem, logo on bicep sleeve, soft and breathable cotton.</div>
+        </div>
+      </div>
+
+      <!-- 5 — Olive Stripe (Polo) -->
+      <div class="item">
+        <img src="cooper-olive-stripe.png" alt="Olive Stripe">
+        <div class="item-content">
+          <div class="item-title">Olive Stripe</div>
+          <div class="item-price">$69.99 CAD</div>
+          <div class="item-desc">Olive-green oversized polo with subtle white collar trim and curved hem, chest logo.</div>
+        </div>
+      </div>
+
+      <!-- 6 — Ivory Floral (Shirt) -->
+      <div class="item">
+        <img src="cooper-ivory-floral.png" alt="Ivory Floral">
+        <div class="item-content">
+          <div class="item-title">Ivory Floral</div>
+          <div class="item-price">$99.99 CAD</div>
+          <div class="item-desc">Off-white shirt with micro floral pattern, relaxed fit, curved hem, small chest logo.</div>
+        </div>
+      </div>
+
+      <!-- 7 — Stone Checked (Shirt) -->
+      <div class="item">
+        <img src="cooper-stone-checked.png" alt="Stone Checked">
+        <div class="item-content">
+          <div class="item-title">Stone Checked</div>
+          <div class="item-price">$99.99 CAD</div>
+          <div class="item-desc">Light gray checkered button-up, curved hem, oversized, small logo at the back neck.</div>
+        </div>
+      </div>
+
+      <!-- 8 — Crimson V-Neck (T-Shirt) -->
+      <div class="item">
+        <img src="cooper-crimson-vneck-oversized.png" alt="Crimson V-Neck">
+        <div class="item-content">
+          <div class="item-title">Crimson V-Neck</div>
+          <div class="item-price">$49.99 CAD</div>
+          <div class="item-desc">Deep red oversized V-neck T-shirt with curved hem and Cooper logo on sleeve.</div>
+        </div>
+      </div>
+
+      <!-- 9 — Marine Flannel (Shirt) -->
+      <div class="item">
+        <img src="cooper-marine-flannel-oversized.png" alt="Marine Flannel">
+        <div class="item-content">
+          <div class="item-title">Marine Flannel</div>
+          <div class="item-price">$99.99 CAD</div>
+          <div class="item-desc">Navy plaid flannel shirt, oversized, curved hem, small logo stitched above chest pocket.</div>
+        </div>
+      </div>
+
+      <!-- 10 — Cloud Back (T-Shirt) -->
+      <div class="item">
+        <img src="cooper-cloud-back.png" alt="Cloud Back">
+        <div class="item-content">
+          <div class="item-title">Cloud Back</div>
+          <div class="item-price">$49.99 CAD</div>
+          <div class="item-desc">White oversized T-shirt with curved hem, back Cooper logo, soft drop shoulder fit.</div>
+        </div>
+      </div>
+
+      <!-- 11 — Sienna Pocket (T-Shirt) -->
+      <div class="item">
+        <img src="cooper-sienna-pocket-oversized.png" alt="Sienna Pocket">
+        <div class="item-content">
+          <div class="item-title">Sienna Pocket</div>
+          <div class="item-price">$49.99 CAD</div>
+          <div class="item-desc">Rust-orange oversized T-shirt with chest pocket, curved hem, small logo on pocket.</div>
+        </div>
+      </div>
+
+      <!-- 12 — Ash Polo Contrast (Polo) -->
+      <div class="item">
+        <img src="cooper-ash-polo-contrast.png" alt="Ash Polo Contrast">
+        <div class="item-content">
+          <div class="item-title">Ash Polo Contrast</div>
+          <div class="item-price">$69.99 CAD</div>
+          <div class="item-desc">Light gray oversized polo with contrasting ribbed collar, curved hem, chest logo.</div>
+        </div>
+      </div>
+
+      <!-- 13 — Midnight Denim (Shirt) -->
+      <div class="item">
+        <img src="cooper-midnight-denim.png" alt="Midnight Denim">
+        <div class="item-content">
+          <div class="item-title">Midnight Denim</div>
+          <div class="item-price">$99.99 CAD</div>
+          <div class="item-desc">Black denim shirt, oversized fit, curved hem, subtle logo on chest seam.</div>
+        </div>
+      </div>
+
+      <!-- 14 — Haze Ringer (T-Shirt) -->
+      <div class="item">
+        <img src="cooper-haze-ringer-oversized.png" alt="Haze Ringer">
+        <div class="item-content">
+          <div class="item-title">Haze Ringer</div>
+          <div class="item-price">$49.99 CAD</div>
+          <div class="item-desc">White oversized T-shirt with gray neck and sleeve rings, curved hem, small chest logo.</div>
+        </div>
+      </div>
+
+      <!-- 15 — Tan Mandarin (Shirt) -->
+      <div class="item">
+        <img src="cooper-tan-mandarin.png" alt="Tan Mandarin">
+        <div class="item-content">
+          <div class="item-title">Tan Mandarin</div>
+          <div class="item-price">$99.99 CAD</div>
+          <div class="item-desc">Beige oversized mandarin-collar shirt, curved hem, wooden buttons, chest logo above placket.</div>
+        </div>
+      </div>
+
+      <!-- 16 — Skyline Pocket (T-Shirt) -->
+      <div class="item">
+        <img src="cooper-skyline-pocket-oversized.png" alt="Skyline Pocket">
+        <div class="item-content">
+          <div class="item-title">Skyline Pocket</div>
+          <div class="item-price">$49.99 CAD</div>
+          <div class="item-desc">Light blue oversized T-shirt with chest pocket, curved hem, logo embroidered on sleeve.</div>
+        </div>
+      </div>
+
+      <!-- 17 — Sage Henley (T-Shirt) -->
+      <div class="item">
+        <img src="cooper-sage-henley.png" alt="Sage Henley">
+        <div class="item-content">
+          <div class="item-title">Sage Henley</div>
+          <div class="item-price">$49.99 CAD</div>
+          <div class="item-desc">Olive oversized Henley with three-button placket, curved hem, small chest logo.</div>
+        </div>
+      </div>
+
+      <!-- 18 — Snowline Shirt (Shirt) -->
+      <div class="item">
+        <img src="cooper-snowline-shirt.png" alt="Snowline Shirt">
+        <div class="item-content">
+          <div class="item-title">Snowline Shirt</div>
+          <div class="item-price">$99.99 CAD</div>
+          <div class="item-desc">White micro-pattern button-up shirt, oversized, curved hem, subtle logo on back neck.</div>
+        </div>
+      </div>
+
+      <!-- 19 — Steel Tee Back (T-Shirt) -->
+      <div class="item">
+        <img src="cooper-steel-tee-back.png" alt="Steel Tee Back">
+        <div class="item-content">
+          <div class="item-title">Steel Tee Back</div>
+          <div class="item-price">$49.99 CAD</div>
+          <div class="item-desc">Cool gray oversized T-shirt with curved hem, large back logo, soft cotton blend.</div>
+        </div>
+      </div>
+
+      <!-- 20 — Ocean Polo (Polo) -->
+      <div class="item">
+        <img src="cooper-ocean-polo-smalllogo.png" alt="Ocean Polo Small Logo">
+        <div class="item-content">
+          <div class="item-title">Ocean Polo</div>
+          <div class="item-price">$69.99 CAD</div>
+          <div class="item-desc">Aqua-blue oversized polo, curved hem, minimal chest logo, smooth premium fabric.</div>
+        </div>
+      </div>
+
+    </section>
+
+    <footer>
+      <p>Need Help?<br>
+      For order issues, shipping questions, or product support — we’ve got you.<br><br>
+      Email: support@cooperwear.com<br>
+      Or visit our Help Center.<br><br>
+      © 2025 Cooper. All rights reserved.</p>
+    </footer>
+  </main>
+</body>
+</html>

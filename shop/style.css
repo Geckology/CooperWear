@@ -1,0 +1,177 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+/* Root colors */
+:root {
+  --bg: #0f0f10;
+  --card: #111215;
+  --accent: #e6e6e6;
+  --muted: #9aa0a6;
+}
+
+/* Reset and base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  background: linear-gradient(180deg,#0b0b0c 0%, #0f1214 100%);
+  color: var(--accent);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 28px;
+}
+
+/* Header */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 36px;
+}
+
+header .left-header, header .brand {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.logo img {
+  width: 90px;
+  border-radius: 10px;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.brand-text .cooper-name {
+  font-family: 'Lobster', cursive;
+  font-size: 1.7em;
+  color: var(--accent);
+}
+
+.brand-text .subtitle {
+  color: var(--muted);
+  font-size: 0.9em;
+  letter-spacing: 0.6px;
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  gap: 28px;
+}
+
+nav a {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.95em;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: var(--muted);
+}
+
+/* Page Titles */
+.page-title {
+  text-align: center;
+  margin: 50px 0 40px;
+}
+
+.page-title h1 {
+  font-family: 'Lobster', cursive;
+  font-size: 3em;
+  letter-spacing: 1px;
+}
+
+/* Grid for collections (caps, jackets, shirts, etc.) */
+.grid, .caps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(460px, 1fr));
+  gap: 28px;
+}
+
+/* Cards for items */
+.item-card, .cap-card {
+  background: var(--card);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 6px 16px rgba(3,6,8,0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.item-card:hover, .cap-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 22px rgba(3,6,8,0.7);
+}
+
+/* Images */
+.item-image, .cap-image {
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+  display: block;
+  background-color: #1b1c1f;
+}
+
+/* Card content */
+.item-info, .cap-info {
+  padding: 16px 20px;
+}
+
+.item-info h2, .cap-info h2 {
+  font-size: 1.4em;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.item-price, .price {
+  font-size: 1.1em;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.item-desc, .cap-info p {
+  color: var(--muted);
+  font-size: 0.95em;
+  line-height: 1.5;
+}
+
+/* Optional badge or type for caps */
+.item-type, .cap-type {
+  font-size: 0.9em;
+  font-weight: 500;
+  color: var(--accent);
+  background: rgba(255,255,255,0.06);
+  padding: 4px 10px;
+  border-radius: 6px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  color: var(--muted);
+  font-size: 13px;
+  margin-top: 60px;
+}
+
+/* Responsive */
+@media (max-width:700px) {
+  .grid, .caps-grid {
+    grid-template-columns: 1fr;
+  }
+}

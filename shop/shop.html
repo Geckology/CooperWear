@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shop — Cooper</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+    :root {
+      --bg:#0f0f10;
+      --card:#111215;
+      --accent:#e6e6e6;
+      --muted:#9aa0a6;
+    }
+
+    * { box-sizing: border-box; margin:0; padding:0; }
+
+    body {
+      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      background: linear-gradient(180deg,#0b0b0c 0%, #0f1214 100%);
+      color: var(--accent);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 28px;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 40px;
+    }
+
+    .left-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .logo img {
+      width: 100px;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .brand-text .cooper-name {
+      font-family: 'Lobster', cursive;
+      color: var(--accent);
+      font-size: 1.8em;
+      letter-spacing: 0.5px;
+      margin-bottom: 2px;
+    }
+
+    .brand-text .subtitle {
+      color: var(--muted);
+      font-size: 0.95em;
+      letter-spacing: 0.8px;
+    }
+
+    nav {
+      display: flex;
+      gap: 28px;
+    }
+
+    nav a {
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 0.95em;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: var(--muted);
+    }
+
+    .collections {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(460px, 1fr));
+      gap: 24px;
+      margin-bottom: 80px;
+    }
+
+    .collection-item {
+      position: relative;
+      aspect-ratio: 16 / 9;
+      border-radius: 14px;
+      overflow: hidden;
+      cursor: pointer;
+      background: var(--card);
+      box-shadow: 0 6px 18px rgba(3,6,8,0.6);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .collection-item:hover {
+      transform: scale(1.03);
+      box-shadow: 0 8px 22px rgba(3,6,8,0.8);
+    }
+
+    .collection-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(0.8);
+      transition: filter 0.3s ease;
+    }
+
+    .collection-item:hover img {
+      filter: brightness(0.6);
+    }
+
+    .collection-title {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: var(--accent);
+      font-size: 50px;
+      font-weight: 600;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.6);
+      text-align: center;
+      letter-spacing: 1px;
+    }
+
+    footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 13px;
+      margin-top: 40px;
+    }
+
+    @media (max-width:960px) {
+      .collections { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width:700px) {
+      .collections { grid-template-columns: 1fr; }
+      nav { gap: 16px; font-size: 0.85em; }
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <header>
+      <div class="left-header">
+        <div class="logo"><img src="logo2.png" alt="Cooper Logo"></div>
+        <div class="brand-text">
+          <div class="cooper-name">Cooper</div>
+          <div class="subtitle">Upperwear Collective</div>
+        </div>
+      </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="About/about.html">About</a>
+        <a href="shop.html">Shop</a>
+        <a href="Support/support.html">Support</a>
+      </nav>
+    </header>
+
+    <section class="collections">
+      <a class="collection-item" href="Caps/caps.html">
+        <img src="caps.png" alt="Caps Collection">
+        <div class="collection-title">Caps</div>
+      </a>
+
+      <a class="collection-item" href="Shirts/shirts.html">
+        <img src="shirts-tshirts.png" alt="Shirts & T-Shirts Collection">
+        <div class="collection-title">Shirts &amp; T-Shirts</div>
+      </a>
+
+      <a class="collection-item" href="Jackets/jackets.html">
+        <img src="jackets.png" alt="Jackets Collection">
+        <div class="collection-title">Jackets</div>
+      </a>
+
+      <a class="collection-item" href="Sweatshirts/sweatshirts.html">
+        <img src="sweatshirtshoodies.png" alt="Sweatshirts & Hoodies Collection">
+        <div class="collection-title">Sweatshirts & Hoodies</div>
+      </a>
+    </section>
+
+    <footer>
+      <p>© 2025 <span class="cooper-name">Cooper</span>. All rights reserved.</p>
+    </footer>
+  </main>
+</body>
+</html>
