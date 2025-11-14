@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sweatshirts & Hoodies — Cooper</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+    :root {
+      --bg:#0f0f10;
+      --card:#111215;
+      --accent:#e6e6e6;
+      --muted:#9aa0a6;
+    }
+
+    * { box-sizing: border-box; margin:0; padding:0; }
+
+    body {
+      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      background: linear-gradient(180deg,#0b0b0c 0%, #0f1214 100%);
+      color: var(--accent);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 28px;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 36px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .brand img {
+      width: 90px;
+      border-radius: 10px;
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-text .cooper-name {
+      font-family: 'Lobster', cursive;
+      color: var(--accent);
+      font-size: 1.8em;
+    }
+
+    .brand-text .subtitle {
+      color: var(--muted);
+      font-size: 0.9em;
+    }
+
+    nav a {
+      color: var(--accent);
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 0.95em;
+      transition: color 0.2s ease;
+    }
+
+    nav a:hover { color: #ffffff; }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(460px, 1fr));
+      gap: 28px;
+    }
+
+    .item {
+      background: var(--card);
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 6px 16px rgba(3,6,8,0.5);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .item:hover {
+      transform: scale(1.02);
+      box-shadow: 0 8px 22px rgba(3,6,8,0.7);
+    }
+
+    .item img {
+      width: 100%;
+      height: 340px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .item-content {
+      padding: 16px 20px;
+    }
+
+    .item-title {
+      font-size: 1.4em;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: var(--accent);
+    }
+
+    .item-price {
+      margin: 6px 0 10px 0;
+      font-size: 1.1em;
+      font-weight: 600;
+      color: #ffffff;
+    }
+
+    .item-desc {
+      color: var(--muted);
+      font-size: 0.95em;
+      line-height: 1.5;
+    }
+
+    footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 13px;
+      margin-top: 60px;
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <header>
+      <div class="brand">
+        <img src="logo2.png" alt="Cooper Logo">
+        <div class="brand-text">
+          <div class="cooper-name">Cooper</div>
+          <div class="subtitle">Upperwear Collective</div>
+        </div>
+      </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="shop.html">Shop</a>
+        <a href="support.html">Support</a>
+      </nav>
+    </header>
+
+    <section class="grid">
+      <!-- Sweatshirts & Hoodies Collection -->
+
+      <!-- Oversized Hoodies -->
+      <div class="item">
+        <img src="cooper-hoodie-oversized-black.png" alt="Oversized Black Hoodie">
+        <div class="item-content">
+          <div class="item-title">Oversized Black Hoodie</div>
+          <div class="item-price">$89.99 CAD</div>
+          <div class="item-desc">Relaxed oversized fit, soft fleece interior, Cooper C logo embroidered on chest.</div>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="cooper-hoodie-oversized-gray.png" alt="Oversized Gray Hoodie">
+        <div class="item-content">
+          <div class="item-title">Oversized Gray Hoodie</div>
+          <div class="item-price">$89.99 CAD</div>
+          <div class="item-desc">Heather gray oversized hoodie with minimalist Cooper logo on sleeve and front pocket.</div>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="cooper-hoodie-oversized-cream.png" alt="Oversized Cream Hoodie">
+        <div class="item-content">
+          <div class="item-title">Oversized Cream Hoodie</div>
+          <div class="item-price">$89.99 CAD</div>
+          <div class="item-desc">Soft cream cotton hoodie with tonal Cooper embroidery and ribbed cuffs.</div>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="cooper-hoodie-oversized-blue-patch.png" alt="Oversized Blue Patch Hoodie">
+        <div class="item-content">
+          <div class="item-title">Oversized Blue Patch Hoodie</div>
+          <div class="item-price">$89.99 CAD</div>
+          <div class="item-desc">Two-tone blue hoodie with stitched Cooper patch, dropped shoulders and relaxed fit.</div>
+        </div>
+      </div>
+
+      <!-- Patterned Hoodies -->
+      <div class="item">
+        <img src="cooper-hoodie-pattern-gray-black.png" alt="Pattern Hoodie Gray Black">
+        <div class="item-content">
+          <div class="item-title">Pattern Gray & Black Hoodie</div>
+          <div class="item-price">$89.99 CAD</div>
+          <div class="item-desc">Abstract patterned hoodie in gray and black, C logo on chest, lined hood, premium cotton.</div>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="cooper-hoodie-tricolor.png" alt="Tricolor Hoodie">
+        <div class="item-content">
+          <div class="item-title">Tricolor Hoodie</div>
+          <div class="item-price">$89.99 CAD</div>
+          <div class="item-desc">Bold tricolor block design in navy, white, and red, oversized fit, Cooper label on hem.</div>
+        </div>
+      </div>
+
+      <!-- Classic Hoodies -->
+      <div class="item">
+        <img src="cooper-hoodie-classic-black.png" alt="Classic Black Hoodie">
+        <div class="item-content">
+          <div class="item-title">Classic Black Hoodie</div>
+          <div class="item-price">$89.99 CAD</div>
+          <div class="item-desc">Essential black hoodie with kangaroo pocket, Cooper logo print, soft brushed interior.</div>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="cooper-hoodie-classic-navy.png" alt="Classic Navy Hoodie">
+        <div class="item-content">
+          <div class="item-title">Classic Navy Hoodie</div>
+          <div class="item-price">$89.99 CAD</div>
+          <div class="item-desc">Navy cotton hoodie with adjustable drawstring hood and Cooper logo across chest.</div>
+        </div>
+      </div>
+
+      <!-- Sweatshirts -->
+      <div class="item">
+        <img src="cooper-sweatshirt-black.png" alt="Black Sweatshirt">
+        <div class="item-content">
+          <div class="item-title">Black Sweatshirt</div>
+          <div class="item-price">$79.99 CAD</div>
+          <div class="item-desc">Crewneck sweatshirt in jet black, embroidered Cooper logo, ribbed cuffs and hem.</div>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="cooper-sweatshirt-gray.png" alt="Gray Sweatshirt">
+        <div class="item-content">
+          <div class="item-title">Gray Sweatshirt</div>
+          <div class="item-price">$79.99 CAD</div>
+          <div class="item-desc">Heather gray crewneck with bold C logo on chest, minimal silhouette and soft cotton feel.</div>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="cooper-sweatshirt-navy.png" alt="Navy Sweatshirt">
+        <div class="item-content">
+          <div class="item-title">Navy Sweatshirt</div>
+          <div class="item-price">$79.99 CAD</div>
+          <div class="item-desc">Classic navy sweatshirt with subtle pattern texture, Cooper script logo in white.</div>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="cooper-sweatshirt-cream.png" alt="Cream Sweatshirt">
+        <div class="item-content">
+          <div class="item-title">Cream Sweatshirt</div>
+          <div class="item-price">$79.99 CAD</div>
+          <div class="item-desc">Warm cream sweatshirt with tonal embroidery, ribbed details, relaxed unisex cut.</div>
+        </div>
+      </div>
+
+      <!-- Graphic Hoodies -->
+      <div class="item">
+        <img src="cooper-hoodie-graphic-black.png" alt="Graphic Black Hoodie">
+        <div class="item-content">
+          <div class="item-title">Graphic Black Hoodie</div>
+          <div class="item-price">$89.99 CAD</div>
+          <div class="item-desc">Black hoodie featuring abstract Cooper graphic print on back, relaxed oversized cut.</div>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="cooper-hoodie-graphic-white.png" alt="Graphic White Hoodie">
+        <div class="item-content">
+          <div class="item-title">Graphic White Hoodie</div>
+          <div class="item-price">$89.99 CAD</div>
+          <div class="item-desc">White hoodie with Cooper text graphic on chest, premium cotton blend, soft feel.</div>
+        </div>
+      </div>
+
+      <!-- Colorblock Sweatshirts -->
+      <div class="item">
+        <img src="cooper-sweatshirt-colorblock.png" alt="Colorblock Sweatshirt">
+        <div class="item-content">
+          <div class="item-title">Colorblock Sweatshirt</div>
+          <div class="item-price">$79.99 CAD</div>
+          <div class="item-desc">Three-tone sweatshirt with color panels and small chest logo, modern streetwear style.</div>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="cooper-sweatshirt-vintage-blue.png" alt="Vintage Blue Sweatshirt">
+        <div class="item-content">
+          <div class="item-title">Vintage Blue Sweatshirt</div>
+          <div class="item-price">$79.99 CAD</div>
+          <div class="item-desc">Washed blue vintage look, Cooper script embroidery, lightweight fabric, relaxed fit.</div>
+        </div>
+      </div>
+
+      <!-- More Hoodies -->
+      <div class="item">
+        <img src="cooper-hoodie-maroon.png" alt="Maroon Hoodie">
+        <div class="item-content">
+          <div class="item-title">Maroon Hoodie</div>
+          <div class="item-price">$89.99 CAD</div>
+          <div class="item-desc">Deep maroon cotton hoodie with front logo, ribbed cuffs and hem, classic comfort.</div>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="cooper-hoodie-green.png" alt="Forest Green Hoodie">
+        <div class="item-content">
+          <div class="item-title">Forest Green Hoodie</div>
+          <div class="item-price">$89.99 CAD</div>
+          <div class="item-desc">Forest green oversized hoodie with small Cooper logo, cozy brushed inside.</div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>Need Help?<br>
+      For order issues, shipping questions, or product support — we’ve got you.<br><br>
+      Email: support@cooperwear.com<br>
+      Or visit our Help Center.<br><br>
+      © 2025 Cooper. All rights reserved.</p>
+    </footer>
+  </main>
+</body>
+</html>
